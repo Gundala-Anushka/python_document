@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Python Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+
+body {
+  min-width: 290px;
+  color: #100101;
+  background-color: #fdfdfd;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(147, 189, 189, 0.816);
+}
+
+header {
+  color: rgb(0, 0, 0);
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color:  rgba(147, 189, 189, 0.816);
+  border-top: 2px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #0a0b10;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: #0f0f13;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color:rgba(147, 189, 189, 0.816);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
+  </style>
+  <body>
+    <nav id="navbar">
+      <header>Py Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#What_you_should_already_know"
+            >What you should already know</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Python_basics"
+            >Basics of Python</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li>
+          <a class="nav-link" href="#Declaring_variables"
+            >Declaring variables</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+        <li>
+          <a class="nav-link" href="#Global_variables">Global variables</a>
+        </li>
+        <li><a class="nav-link" href="#Constants">Constants</a></li>
+        <li><a class="nav-link" href="#Data_types">Data types</a></li>
+        <li>
+          <a class="nav-link" href="#if...else_statement"
+            >if...else statement</a
+          >
+        </li>
+        <li><a class="nav-link" href="#while_statement">while statement</a></li>
+        <li>
+          <a class="nav-link" href="#Function_declarations"
+            >Function declarations</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            Python was created by Guido Van Rossum in early 1990s.</p>
+            <p> 
+            It is now widely used by beginners proving its a dynamic language hence easy to learn.</p>
+            <p>
+            Python supports various datatypes and literals such as:- 
+            string,tuple,lists,dictionary,set,int,float etc
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <article>
+          <p>This guide assumes you have the following basic background:</p>
+
+          <ul>
+            <li>
+              A general understanding of the Internet and the World Wide Web
+              (WWW).
+            </li>
+            <li>Some kind of knowledge regarding tokens,keywords,identifiers,literals,operators,puntuators,variables and datatypes.</li>
+            <li>
+              Some programming experience.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="#Python_basics">
+        <header>Basics of Python</header>
+        <article>
+          <p>
+            Python is a general-purpose, high-level programming language. 
+            It was designed with an emphasis on code readability, and its syntax allows programmers to express their concepts in fewer lines of code, and these codes are known as scripts. 
+            These scripts contain character sets, tokens, and identifiers.
+          </p>
+
+          <p>
+            <p>A Token is the smallest individual unit in a python program. All statements and instructions in a program are built with tokens.</p>
+            <p>Keywords are words that have some special meaning or significance in a programming language.</p> 
+            <p>Identifiers are the names given to any variable, function, class, list, methods, etc. for their identification.</p>
+            Literals are the fixed values or data items used in a source code, foe ex- string,float,int,complex,boolean,list,tuple,dict,sets.
+           <p>The variables on which operation is applied are called operands. Operators can be unary or binary. Unary operators are the ones acting on a single operand like complement operator, etc. While binary operators need two operands to operate.</p>
+           <p>These are the symbols that used in Python to organize the structures, statements, and expressions. Some of the Punctuators are: [ ] { } ( ) @  -=  +=  *=  //=  **==  = , etc.</p>
+        </p>
+        </article>
+      </section>
+      <section class="main-section" id="Hello_world">
+        <header>Hello world</header>
+        <article>
+          To get started with writing Python, open the any python notepad and write
+          your first "Hello world" python code:
+          <code
+            >print("Hello_world")
+        </code>
+        </article>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <p>
+          You use variables as symbolic names for values in your application.
+          The names of variables, called identifiers, conform to certain rules.
+        </p>
+        <p>
+          Identifiers cannot be a keyword.
+          Identifiers are case-sensitive.
+          It can have a sequence of letters and digits. However, it must begin with a letter or _. The first letter of an identifier cannot be a digit.
+          It's a convention to start an identifier with a letter rather _.
+          Whitespaces are not allowed.
+          We cannot use special symbols like !, @, #, $, and so on.
+       </p>
+      </section>
+      <section class="main-section" id="Declaring_variables">
+        <header>Declaring variables</header>
+        <article>
+          You can declare a variable in these ways:
+          <p>
+            normally assigining the the value <code> x = 42.</code> This
+            syntax can be used to declare both local and global variables.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Variable_scope">
+        <header>Variable scope</header>
+        <article>
+          <p>
+            When you declare a variable outside of any function, it is called a
+            global variable, because it is available to any other code in the
+            current document. When you declare a variable within a function, it
+            is called a local variable, because it is available only within that
+            function.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Global_variables">
+        <header>Global variables</header>
+        <article>
+          <p>
+            Variables that are created outside of a function are known as global variables.
+            Global variables can be used by everyone, both inside of functions and outside.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Constants">
+        <header>Constants</header>
+        <article>
+          <p>
+            A python constant is a variable whose value cannot be changed throughout the code
+          </p>
+
+          <code> PI = 3.14
+            #main.py file
+            import constant as const
+            print('Value of PI:', cons.PI)
+          </code>
+          <p>
+            A constant cannot change value through assignment or be re-declared
+            while the script is running. It has to be initialized to a value.
+          </p>
+          <p>
+            The scope rules for constants are the same as those for let block
+            scope variables. If the const keyword is omitted, the identifier is
+            assumed to represent a variable.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Data_types">
+        <header>Data types</header>
+        <article>
+          <p>In programming, data type is an important concept.
+            Variables can store data of different types, and different types can do different things.
+            Python has the following data types built-in by default, in these categories</p>
+                <li>Text Type: 	str</li>
+                <li>
+                  Numeric Types: 	int, float, complex
+                </li>
+                <li>
+                  Sequence Types: 	list, tuple, range </li>
+                <li>Mapping Type: 	dict
+                   </li>
+                <li> Set Types: 	set, frozenset
+                   </li>
+                <li>
+                  Boolean Type:bool</li>
+                <li>Binary Types: 	bytes, bytearray, memoryview</li>
+                <li>None Type:NoneType</li>
+              </ul>
+            </li>
+          </ul>
+          Although these data types are a relatively small amount, they enable
+          you to perform useful functions with your applications. Objects and
+          functions are the other fundamental elements in the language. You can
+          think of objects as named containers for values, and functions as
+          procedures that your application can perform.
+        </article>
+      </section>
+      <section class="main-section" id="if...else_statement">
+        <header>if...else statement</header>
+        <article>
+          Conditional statements in Python play a key role in determining the direction of program execution.
+          Among these, If-Else statements are fundamental, providing a way to execute different blocks of code based on specific conditions.
+           As the name suggests, If-Else statements offer two paths, allowing for different outcomes depending on the condition evaluated
+          <code>if condition:
+            # Statements to execute if
+            # condition is true</code>
+          <p>
+            You may also compound the statements using else if to have multiple
+            conditions tested in sequence, as follows:
+          </p>
+          The if statement alone tells us that if a condition is true it will execute a block of statements and if the condition is false it wont.
+           But if we want to do something else if the condition is false, we can use the else statement with the if statement Python to execute a block of code when the Python if condition is false. 
+          <code>if (condition):
+            # Executes this block if
+            # condition is true
+        else:
+            # Executes this block if
+            # condition is false</code>
+        </article>
+      </section>
+      <section class="main-section" id="while_statement">
+        <header>while statement</header>
+        <article>
+          A while statement executes its statements as long as a specified
+          condition evaluates to true. A while statement looks as follows:
+
+          <code>while (condition) statement</code> If the condition becomes
+          false, statement within the loop stops executing and control passes to
+          the statement following the loop.
+
+          <p>
+            The condition test occurs before statement in the loop is executed.
+            If the condition returns true, statement is executed and the
+            condition is tested again. If the condition returns false, execution
+            stops and control is passed to the statement following while.
+          </p>
+          Example:
+          <p>
+            The following while loop iterates as long as x is less than three:
+          </p>
+
+          <code>n = 3
+                x = 0
+               while n>x:
+                  print("n")
+                  x=+1
+                  n+=1
+                </code>
+          <p>
+            With each iteration, the loop increments n and adds that value to x.
+            Therefore, x and n take on the following values:
+          </p>
+
+          <ul>
+            <li>After the first pass: x = 1 and n= 1</li>
+            <li>After the second pass: x = 2 and n = 3</li>
+            <li>After the third pass: x= 3 and n = 6</li>
+          </ul>
+          <p>
+            After completing the third pass, the condition is no longer
+            true, so the loop terminates.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Function_declarations">
+        <header>Function declarations</header>
+        <article>
+          A function definition (also called a function declaration, or function
+          statement) consists of the function keyword, followed by:
+
+          <ul>
+            <li>The name of the function.</li>
+            <li>
+              A list of arguments to the function, enclosed in parentheses and
+              separated by commas.
+            </li>
+            <li>
+              The python statements that define the function, enclosed in
+               brackets,( ).
+            </li>
+          </ul>
+          <p>
+            For example, the following code defines a simple function named
+            square:
+          </p>
+
+          <code> def square(number):
+                    return(number*10)
+          </code>
+          <p>
+            The function square takes one argument, called number. The function
+            consists of one statement that says to return the argument of the
+            function (that is, number) multiplied by 10. The return
+            statement specifies the value returned by the function.
+          </p>
+          <code>return 10 * number;</code>
+          <p>
+            Primitive parameters (such as a number) are passed to functions by
+            value; the value is passed to the function, but if the function
+            changes the value of the parameter, this change is not reflected
+            globally or in the calling function.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is writen by Anushka
+              <li>Inspired by sumita arora book class 12 and Internet</li>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
